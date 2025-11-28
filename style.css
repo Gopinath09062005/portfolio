@@ -1,0 +1,199 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 1. FONT SIZE REDUCED (Normal Standard Size) */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem; /* Reduced from 1.25rem to 1rem (16px) */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Paragraphs and Lists - Reset to normal */
+p, li, a, button, label, input, textarea, .card-text, .lead, .form-label, small {
+  font-size: 1rem; /* Reset to normal size */
+}
+
+/* ----------------------------------------------
+   2. IMPROVED NAVBAR (Glassmorphism)
+---------------------------------------------- */
+.custom-navbar {
+  background: rgba(33, 37, 41, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.4rem; /* Slightly reduced */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem; /* Standard size */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* ----------------------------------------------
+   3. HERO SECTION & ANIMATION
+---------------------------------------------- */
+.hero-section {
+  background: linear-gradient(135deg, #0b5ed7 0%, #1a1d20 50%, #000000 100%);
+  color: #fff;
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-box {
+  max-width: 300px; /* Slightly smaller image container */
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.profile-box img {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ----------------------------------------------
+   4. TYPOGRAPHY (Headings Reduced)
+---------------------------------------------- */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Headings resized to match standard proportion */
+h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; }
+h2 { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+
+/* ----------------------------------------------
+   5. INTERACTIVE CARDS
+---------------------------------------------- */
+.card {
+  border: none;
+  border-radius: 12px; /* Slightly tighter radius */
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.85rem; /* Smaller badge text */
+  background: #f0f7ff;
+  color: #0d6efd;
+  font-weight: 600;
+  border: 1px solid #cce5ff;
+  transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+  background: #0d6efd;
+  color: white;
+  transform: scale(1.05);
+  cursor: default;
+}
+
+/* ----------------------------------------------
+   6. INTERNSHIP CARD (New Design)
+---------------------------------------------- */
+.internship-card {
+  border-left: 4px solid #0d6efd !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
+}
+
+.icon-box {
+  background: #e7f1ff;
+  width: 50px; /* Smaller icon box */
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tech-tag {
+  font-size: 0.8rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* ----------------------------------------------
+   7. BUTTONS & INPUTS
+---------------------------------------------- */
+.btn {
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.form-control {
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #dee2e6;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+  border-color: #0d6efd;
+}
+
+/* Contact Links */
+#contact a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #1a1d20 !important;
+}

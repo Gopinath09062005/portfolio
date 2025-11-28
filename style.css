@@ -213,3 +213,46 @@ footer {
 .about-section h2 {
     font-size: 2rem; /* Clean Heading size */
 }
+
+/* ----------------------------------------------
+   IMPROVED SERVICES SECTION
+---------------------------------------------- */
+
+.service-box {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(0,0,0,0.05); /* Very light border */
+}
+
+/* On Hover: Moves up & Adds color at bottom */
+.service-box:hover {
+  transform: translateY(-10px); /* Lifts up */
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
+}
+
+/* The Border Bottom Effect */
+.border-bottom-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-bottom-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: #0d6efd; /* Blue Line */
+  transition: width 0.3s ease;
+}
+
+.service-box:hover::after {
+  width: 100%; /* Line grows on hover */
+}
+
+/* Icon Circle Styling */
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  font-size: 1.5rem;
+}
